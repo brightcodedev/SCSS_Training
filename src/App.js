@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+//Components
+import EmployeeCard from './EmployeeCard';
 
 let pilotData = {
   name: "Jack Dawes",
@@ -36,32 +38,6 @@ let groundCrewData = {
     yearsWithCompany: "2"
   },
   image: "ground_crew.jpg"
-}
-
-const EmployeeCard = (props) => {
-  let employeeData = props.employeeData;
-  let stats = employeeData.stats;
-
-  return (
-    <div className="employeeCard">
-        <img className="employeeCard__profileImage" src={employeeData.image} />
-        <div className="employeeCard__name">{employeeData.name}</div>
-        <div className="employeeCard__title">{employeeData.title}</div>
-        <div className="employeeCard__stats">
-          <div>
-            <div>
-              {stats.milesFlown}
-            </div>
-            <div>
-              miles flown
-            </div>
-          </div>
-          <div>{stats.flights}</div>
-          <div>{stats.yearsWithCompany}</div>
-
-        </div>
-      </div>
-  )
 }
 
 function App() {
