@@ -25,7 +25,8 @@ let flightAttendantData = {
     flights: "2345",
     yearsWithCompany: "18"
   },
-  image: "flight_attendant.jpg"
+  image: "flight_attendant.jpg",
+  active: false
 }
 
 let groundCrewData = {
@@ -37,7 +38,8 @@ let groundCrewData = {
     flights: "345",
     yearsWithCompany: "2"
   },
-  image: "ground_crew.jpg"
+  image: "ground_crew.jpg",
+  featured: true
 }
 
 function App() {

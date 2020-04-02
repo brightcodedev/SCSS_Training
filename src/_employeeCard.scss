@@ -1,33 +1,38 @@
+@import 'colors';
+@import 'layout';
+
 .employeeCard {
     width: 400px;
-    border: 2px solid navy;
+    border: 2px solid $nightSky;
+    padding-top: 10px;
     margin: 10px;
     text-align: center;
+    color: white;
     
     &__profileImage {
         width: 80px;
         border-radius: 40px;
-        border: 2px blue solid;
+        border: 2px $daySky solid;
     }
     &__stats {
-        display: flex;
-        justify-content: space-evenly;
-        border-top: 1px solid #d1e0e0;
+        @extend %space-evenly;
+        border-top: 1px solid $divider;
+        margin-top: 10px;
         > div {
             padding: 4px;
             width: -webkit-fill-available;
             &:not(:last-child){
-                border-right: 1px solid #d1e0e0;
+                border-right: 1px solid $divider;
             }
         }
     }
 
     //modifiers
-    &--featured {
-        border: pink dotted 2px;
+    &.featured {
+        border: $goldCoast dotted 8px;
     }
 
-    &--retired {
+    &.retired {
         background-color: gray;
     }
   }
@@ -36,16 +41,20 @@
 
   .employeeCard--Pilot {
       @extend .employeeCard;
+      background-color: $daySky;
+      .employeeCard__name {
+          color: $goldCoast;
+      }
   }
 
   .employeeCard--FlightAttendant {
       @extend .employeeCard;
-      background-color: #99c2ff;
+      background-color: $barney;
   }
 
   .employeeCard--GroundCrew {
     @extend .employeeCard;
-    background-color: #00ff80;
+    background-color: $twilight;
 }
 
   

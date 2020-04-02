@@ -1,17 +1,17 @@
 import React from 'react';
 
 const EmployeeCard = (props) => {
-    const [role, setRole] = React.useState(props.employeeData.role)
-
-    React.useEffect(() => {
-        setRole('--' + role.replace(' ', ''))
-    }, [])
 
     let employeeData = props.employeeData;
     let stats = employeeData.stats;
-  
+    
+    let className = "employeeCard--" + employeeData.role.replace(' ', '');
+
+    // if(employeeData.active != undefined &&  !employeeData.active) className += " retired";
+    // if(employeeData.featured) className += " featured";
+    
     return (
-      <div className={'employeeCard' + role}>
+      <div className={className}>
           <img className="employeeCard__profileImage" src={employeeData.image} />
           <div className="employeeCard__name">{employeeData.name}</div>
           <div className="employeeCard__title">{employeeData.role} - {employeeData.title}</div>
