@@ -12,13 +12,27 @@
     &__stats {
         display: flex;
         justify-content: space-evenly;
-        border-top: 1px solid black;
-        div {
-            border-right: 1px solid black;
+        border-top: 1px solid #d1e0e0;
+        > div {
+            padding: 4px;
             width: -webkit-fill-available;
+            &:not(:last-child){
+                border-right: 1px solid #d1e0e0;
+            }
         }
     }
+
+    //modifiers
+    &--featured {
+        border: pink dotted 2px;
+    }
+
+    &--retired {
+        background-color: gray;
+    }
   }
+
+
 
   .employeeCard--Pilot {
       @extend .employeeCard;

@@ -19,7 +19,7 @@ let pilotData = {
 let flightAttendantData = {
   name: "Stefanie Ramirez",
   role: "Flight Attendant",
-  title: "senior",
+  title: "Senior",
   stats: {
     milesFlown: "345,453",
     flights: "2345",
@@ -31,7 +31,7 @@ let flightAttendantData = {
 let groundCrewData = {
   name: "Joey Ripapelli",
   role: "Ground Crew",
-  title: "rookie",
+  title: "Rookie",
   stats: {
     milesFlown: "0",
     flights: "345",
